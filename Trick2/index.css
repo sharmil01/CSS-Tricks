@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
+}
+
+.main {
+  width: 100wh;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(216, 100%, 94%);
+}
+
+.center {
+  width: 300px;
+  height: 180px;
+  border-radius: 16px;
+  background: linear-gradient(to right top, #52b6fe, #6154fe);
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.012);
+}
+
+.center::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(
+    20% 0%,
+    100% 0,
+    100% 20%,
+    100% 80%,
+    100% 100%,
+    64% 66%,
+    39% 41%,
+    0 0
+  );
+  background: rgba(1, 4, 64);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 4, 64, 1) 4% rgba(20, 1, 130, 1) 24%,
+    rgba(39, 5, 185, 0.9535962877030162) 51%,
+    rgba(0, 104, 255, 1) 75%,
+    rgba(5, 145, 184, 1) 93%
+  );
+  border-radius: 16px;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.center::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  clip-path: polygon(
+    20% 0%,
+    100% 0,
+    100% 20%,
+    100% 80%,
+    100% 100%,
+    64% 66%,
+    39% 41%,
+    0 0
+  );
+  background-image: url(rain.png);
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.center .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.center .top h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  z-index: 1;
+}
+
+.center .top h1 {
+  font-size: 30px;
+  text-align: right;
+  z-index: 1;
+}
+
+.center .bottom {
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.center .bottom h2 {
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #dfe6e9;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.center .bottom p {
+  color: #fff;
+}
